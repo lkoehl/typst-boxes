@@ -35,3 +35,30 @@
     ]
   ]
 }
+
+
+#let stickybox(rotation: 0deg, width: 100%, body) = {
+  let stickyYellow = rgb(255, 240, 172)
+  
+  return rotate(rotation)[
+    #block(width: width)[
+      #box(
+        fill: stickyYellow,
+      )[
+        #place(top + center, dy: -10pt)[
+          #box(
+            fill: rgb(0,0,0,25), 
+            width: 1.5in,
+            height: 20pt,
+          )
+        ]
+        #box(
+          width: 100%,
+          inset: (top:18pt, x: 8pt, bottom: 8pt)
+        )[
+          #body
+        ]
+      ]
+    ]
+  ]
+}

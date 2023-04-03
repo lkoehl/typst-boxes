@@ -25,3 +25,6 @@
   width: 10cm)[
     #lorem(20)
 ]
+
+#v(8pt)
+#stickybox(rotation: 3deg, width: 7cm)[#lorem(20)]
