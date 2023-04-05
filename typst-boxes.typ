@@ -48,10 +48,11 @@
     strokeColor = rgb(29, 144, 208)
   }
   
-  return box(
+  return block(
       stroke: strokeColor,
       radius: radius,
-      width: width
+      width: width,
+      above: 26pt,
     )[
       #if centering [
         #place(top + center, dy: -12pt)[
