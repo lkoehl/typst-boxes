@@ -49,7 +49,7 @@
   }
   
   return block(
-      stroke: strokeColor,
+      stroke: 2pt + strokeColor,
       radius: radius,
       width: width,
       above: 26pt,
