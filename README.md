@@ -1,39 +1,82 @@
 # typst-boxes
 
-Colorful boxes in [typst](https://github.com/typst/typst).
+Colorful boxes in [Typst](https://github.com/typst/typst).
 Copy and import the [typst-boxes.typ](typst-boxes.typ) file to use in your own projects.
+
+Check out [the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all boxes in action
 
 
 Current features include:
 - a colorful box is in four different colors (black, red, blue, green)
+- a colorful box with a slanted headline
+- a box with a simple outline 
 - a rotateable stickynote
 
-## Examples
-![basic example](examples.png)
+## Colorbox
+![colorbox_example](examples/colorbox.png)
 
-### Code
+### Usage
 ```
-#colorbox(title: lorem(2))[#lorem(50)]
-
 #colorbox(
-  title: lorem(2),
-  color: "red")[
-    #lorem(50)
+  title: lorem(5),
+  color: "blue",
+  radius: 2pt,
+  width: auto
+)[
+  #lorem(50)
+]
+```
+
+## Slanted Colorbox
+![slantedColorbox_example](examples/slantedColorbox.png)
+
+### Usage
+```
+#slantedColorbox(
+  title: lorem(5),
+  color: "red",
+  radius: 0pt,
+  width: auto
+)[
+  #lorem(50)
+]
+```
+
+## Outlinebox
+![outlinebox_example](examples/outlinebox.png)
+
+### Usage
+```
+#outlinebox(
+  title: lorem(5),
+  color: none,
+  width: auto,
+  radius: 2pt,
+  centering: false
+)[
+  #lorem(50)
 ]
 
-#colorbox(
-  title: lorem(2),
-  color: "blue")[
-    #lorem(50)
-]
-
-#colorbox(
-  title: lorem(2),
+#outlinebox(
+  title: lorem(5),
   color: "green",
-  width: 10cm)[
-    #lorem(20)
+  width: auto,
+  radius: 2pt,
+  centering: true
+)[
+  #lorem(50)
 ]
+```
 
-#v(8pt)
-#stickybox(rotation: 3deg, width: 7cm)[#lorem(20)]
+## Stickybox
+![stickybox](examples/stickybox.png)
+
+### Usage
+```
+#stickybox(
+  rotation: 3deg,
+  width: 7cm
+)[
+  #lorem(20)
+]
 ```
