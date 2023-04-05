@@ -1,7 +1,7 @@
 #let colorbox(title: "title", color: none, radius: 2pt, width: auto, body) = {
 
   let strokeColor = luma(70)
-  let backgroundColor = luma(240)
+  let backgroundColor = white
 
   if color == "red" {
     strokeColor = rgb(237, 32, 84)
@@ -57,7 +57,7 @@
 #let slantedColorbox(title: "title", color: none, radius: 0pt, width: auto, body) = {
 
   let strokeColor = luma(70)
-  let backgroundColor = luma(240)
+  let backgroundColor = white
 
   if color == "red" {
     strokeColor = rgb(237, 32, 84)
