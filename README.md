@@ -3,11 +3,11 @@
 Colorful boxes in [Typst](https://github.com/typst/typst).
 Copy and import the [typst-boxes.typ](typst-boxes.typ) file to use in your own projects.
 
-Check out [the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all boxes in action
+Check out [the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all boxes in action.
 
 
 Current features include:
-- a colorful box is in four different colors (black, red, blue, green)
+- a colorful box in four different colors (black, red, blue, green)
 - a colorful box with a slanted headline
 - a box with a simple outline 
 - a rotateable stickynote
