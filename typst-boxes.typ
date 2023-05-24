@@ -20,14 +20,14 @@
     radius: radius,
     width: width
   )[
-    #box(
+    #block(
       fill: strokeColor, 
       inset: 8pt,
       radius: (top-left: radius, bottom-right: radius),
     )[
       #text(fill: white, weight: "bold")[#title]
     ]
-    #box(
+    #block(
       width: 100%,
       inset: (x: 8pt, bottom: 8pt)
     )[
@@ -77,7 +77,7 @@
     width: width
   )[
     #slantedBackground(color: strokeColor)[#title]
-    #box(
+    #block(
       width: 100%,
       inset: (top: -2pt, x: 10pt, bottom: 10pt)
     )[
@@ -106,7 +106,7 @@
     )[
       #if centering [
         #place(top + center, dy: -12pt)[
-          #box(
+          #block(
             fill: strokeColor,
             inset: 8pt,
             radius: radius,
@@ -116,7 +116,7 @@
         ]
       ] else [
         #place(top + start, dy: -12pt, dx:20pt)[
-          #box(
+          #block(
             fill: strokeColor,
             inset: 8pt,
             radius: radius,
@@ -126,7 +126,7 @@
         ]
       ]
       
-      #box(
+      #block(
         width: 100%,
         inset: (top:20pt, x: 10pt, bottom: 10pt)
       )[
@@ -139,18 +139,18 @@
   let stickyYellow = rgb(255, 240, 172)
   
   return rotate(rotation)[
-    #box(
+    #block(
       fill: stickyYellow,
       width: width
     )[
       #place(top + center, dy: -10pt)[
-        #box(
+        #block(
           fill: rgb(0,0,0,25), 
           width: 1.5in,
           height: 20pt,
         )
       ]
-      #box(
+      #block(
         width: 100%,
         inset: (top:18pt, x: 8pt, bottom: 8pt)
       )[
