@@ -22,7 +22,7 @@
   )[
     #box(
       fill: strokeColor, 
-      inset: 6pt,
+      inset: 8pt,
       radius: (top-left: radius, bottom-right: radius),
     )[
       #text(fill: white, weight: "bold")[#title]
