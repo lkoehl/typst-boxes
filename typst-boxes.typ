@@ -1,4 +1,4 @@
-#let colorbox(title: "title", color: none, radius: 2pt, width: auto, body) = {
+#let colorbox(title: "title", color: none, radius: 2pt, width: auto, breakable: true, body) = {
 
   let strokeColor = luma(70)
   let backgroundColor = white
@@ -18,7 +18,8 @@
     fill: backgroundColor,
     stroke: 2pt + strokeColor,
     radius: radius,
-    width: width
+    width: width,
+    breakable: breakable
   )[
     #block(
       fill: strokeColor, 
@@ -54,7 +55,7 @@
   })
 }
 
-#let slantedColorbox(title: "title", color: none, radius: 0pt, width: auto, body) = {
+#let slantedColorbox(title: "title", color: none, radius: 0pt, width: auto, breakable: true, body) = {
 
   let strokeColor = luma(70)
   let backgroundColor = white
@@ -74,7 +75,8 @@
     fill: backgroundColor,
     stroke: 2pt + strokeColor,
     radius: radius,
-    width: width
+    width: width,
+    breakable: breakable
   )[
     #slantedBackground(color: strokeColor)[#title]
     #block(
@@ -86,7 +88,7 @@
   ]
 }
 
-#let outlinebox(title: "title",color: none, width: 100%, radius: 2pt, centering: false, body) = {
+#let outlinebox(title: "title",color: none, width: 100%, radius: 2pt, centering: false, breakable: true, body) = {
 
   let strokeColor = luma(70)
 
@@ -103,6 +105,7 @@
       radius: radius,
       width: width,
       above: 26pt,
+      breakable: breakable
     )[
       #if centering [
         #place(top + center, dy: -12pt)[
