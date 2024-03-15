@@ -1,0 +1,4 @@
+{
+  "typst-lsp.experimentalFormatterMode": "on",
+  "typst-lsp.exportPdf": "never"
+}
