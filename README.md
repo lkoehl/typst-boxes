@@ -1,21 +1,22 @@
 # typst-boxes
 
 Colorful boxes in [Typst](https://github.com/typst/typst).
-Copy and import the [typst-boxes.typ](typst-boxes.typ) file to use in your own projects.
 
-Check out [the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all boxes in action.
-
+Check out [the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all boxes in action
 
 Current features include:
-- a colorful box in four different colors (black, red, blue, green)
+
+- a colorful box is in four different colors (black, red, blue, green)
 - a colorful box with a slanted headline
-- a box with a simple outline 
+- a box with a simple outline
 - a rotateable stickynote
 
 ## Colorbox
+
 ![colorbox_example](examples/colorbox.png)
 
 ### Usage
+
 ```
 #colorbox(
   title: lorem(5),
@@ -28,11 +29,13 @@ Current features include:
 ```
 
 ## Slanted Colorbox
-![slantedColorbox_example](examples/slantedColorbox.png)
+
+![slantedColorbox_example](examples/slanted-colorbox.png)
 
 ### Usage
+
 ```
-#slantedColorbox(
+#slanted-colorbox(
   title: lorem(5),
   color: "red",
   radius: 0pt,
@@ -43,13 +46,14 @@ Current features include:
 ```
 
 ## Outlinebox
-![outlinebox_example](examples/outlinebox.png)
+
+![outlinebox_example](examples/outline-colorbox.png)
 
 ### Usage
+
 ```
 #outlinebox(
   title: lorem(5),
-  color: none,
   width: auto,
   radius: 2pt,
   centering: false
@@ -69,13 +73,15 @@ Current features include:
 ```
 
 ## Stickybox
+
 ![stickybox](examples/stickybox.png)
 
 ### Usage
+
 ```
 #stickybox(
-  rotation: 3deg,
-  width: 7cm
+  rotation: 5deg,
+  width: 5cm
 )[
   #lorem(20)
 ]
