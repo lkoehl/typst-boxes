@@ -5,7 +5,14 @@
   blue: (stroke: rgb(29, 144, 208), fill: rgb(232, 246, 253), title: white),
 )
 
-#let colorbox(title: none, color: "default", radius: 2pt, width: auto, body) = {
+#let colorbox(
+  title: none,
+  box-colors: box-colors,
+  color: "default",
+  radius: 2pt,
+  width: auto,
+  body,
+) = {
   return block(
     fill: box-colors.at(color).fill,
     stroke: 2pt + box-colors.at(color).stroke,
@@ -31,7 +38,14 @@
   ]
 }
 
-#let slanted-colorbox(title: "Title", color: "default", radius: 2pt, width: auto, body) = {
+#let slanted-colorbox(
+  title: "Title",
+  box-colors: box-colors,
+  color: "default",
+  radius: 2pt,
+  width: auto,
+  body
+) = {
   let slanted-background(color: black, body) = {
     set text(fill: white, weight: "bold")
     style(styles => {
@@ -65,6 +79,7 @@
 
 #let outline-colorbox(
   title: "Title",
+  box-colors: box-colors,
   color: "default",
   width: 100%,
   radius: 2pt,
