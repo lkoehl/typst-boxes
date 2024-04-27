@@ -45,14 +45,14 @@ Current features include:
 ]
 ```
 
-## Outlinebox
+## Outline Colorbox
 
 ![outlinebox_example](examples/outline-colorbox.png)
 
 ### Usage
 
 ```
-#outlinebox(
+#outline-colorbox(
   title: lorem(5),
   width: auto,
   radius: 2pt,
@@ -61,7 +61,7 @@ Current features include:
   #lorem(50)
 ]
 
-#outlinebox(
+#outline-colorbox(
   title: lorem(5),
   color: "green",
   width: auto,
