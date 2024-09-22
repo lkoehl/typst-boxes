@@ -11,6 +11,7 @@
   color: "default",
   radius: 2pt,
   width: auto,
+  breakable: true,
   body,
 ) = {
   return block(
@@ -18,6 +19,7 @@
     stroke: 2pt + box-colors.at(color).stroke,
     radius: radius,
     width: width,
+    breakable: breakable,
   )[
     #if title != none [
       #block(
