@@ -5,6 +5,14 @@
   red: (stroke: rgb(237, 32, 84), fill: rgb(253, 228, 224), title: white),
   green: (stroke: rgb(102, 174, 62), fill: rgb(235, 244, 222), title: white),
   blue: (stroke: rgb(29, 144, 208), fill: rgb(232, 246, 253), title: white),
+  purple: (stroke: rgb(137, 89, 168), fill: rgb(230, 217, 243), title: white),
+  gray: (stroke: rgb(158, 158, 158), fill: rgb(245, 245, 245), title: white),
+  cyan: (stroke: rgb(0, 188, 212), fill: rgb(224, 247, 250), title: white),
+  teal: (stroke: rgb(0, 150, 136), fill: rgb(224, 242, 241), title: white),
+  indigo: (stroke: rgb(63, 81, 181), fill: rgb(232, 234, 246), title: white),
+  gold: (stroke: rgb(212, 175, 55), fill: rgb(255, 247, 207), title: white),
+  lavender: (stroke: rgb(150, 123, 182), fill: rgb(238, 230, 250), title: white),
+  sand: (stroke: rgb(194, 178, 128), fill: rgb(245, 238, 222), title: white),
 )
 
 #let colorbox(
