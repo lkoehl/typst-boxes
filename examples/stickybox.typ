@@ -1,4 +1,4 @@
-#import "@dev/colorful-boxes:1.3.1": *
+#import "../lib.typ": stickybox
 
 #set page(width: auto, margin: 0.5cm, height: auto)
 
