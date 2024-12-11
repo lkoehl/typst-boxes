@@ -135,6 +135,7 @@
 
 #let outline-colorbox(
   title: "Title",
+  box-colors: box-colors,
   color: "default",
   width: 100%,
   radius: 2pt,

@@ -6,6 +6,6 @@ entrypoint = "lib.typ"
 exclude = ["/examples/*"]
 authors = ["Lukas Köhl <https://github.com/lkoehl>"]
 license = "MIT"
-description = "Predefined colorful boxes"
+description = "Predefined colorful boxes to spice up your document"
 categories = ["components"]
 keywords = ["colorbox", "boxes"]
