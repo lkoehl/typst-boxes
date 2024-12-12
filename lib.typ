@@ -47,7 +47,7 @@
           offset: (
             x: -1em,
           ),
-          radius: (radius),
+          radius: (top-left: radius, bottom-right: radius),
         ),
       ),
       body-style: (
