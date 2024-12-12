@@ -1,23 +1,31 @@
-# typst-boxes
+# Typst Boxes
 
-Colorful boxes in [Typst](https://github.com/typst/typst).
+**Typst Boxes** is a package for creating colorful and customizable boxes in [Typst](https://github.com/typst/typst). It's perfect for enhancing your documents with visually appealing components.
 
-Check out [the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all boxes in action
+[➡️ Check out the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all the boxes in action!
 
-Current features include:
+---
 
-- a colorful box is in four different colors (black, red, blue, green)
-- a colorful box with a slanted headline
-- a box with a simple outline
-- a rotateable stickynote
+## Features
 
-## Colorbox
+- Colorful boxes in four predefined colors: **black**, **red**, **blue**, and **green**.
+- A **slanted headline colorbox** for dynamic designs.
+- A **simple outline box** for clean layouts.
+- A **rotateable sticky note** for fun or informal content.
+
+---
+
+## Examples and Usage
+
+### Colorbox
 
 ![colorbox_example](examples/colorbox.png)
 
-### Usage
+A versatile colorful box with a title and customizable design.
 
-```
+#### Code:
+
+```typst
 #colorbox(
   title: lorem(5),
   color: "blue",
@@ -28,13 +36,15 @@ Current features include:
 ]
 ```
 
-## Slanted Colorbox
+### Slanted Colorbox
 
 ![slantedColorbox_example](examples/slanted-colorbox.png)
 
-### Usage
+Add some flair with a slanted headline.
 
-```
+#### Code
+
+```typst
 #slanted-colorbox(
   title: lorem(5),
   color: "red",
@@ -45,13 +55,15 @@ Current features include:
 ]
 ```
 
-## Outline Colorbox
+### Outline Colorbox
 
 ![outlinebox_example](examples/outline-colorbox.png)
 
-### Usage
+A clean and simple box with an outline. Titles can be aligned to the center or the left.
 
-```
+#### Code
+
+```typst
 #outline-colorbox(
   title: lorem(5),
   width: auto,
@@ -72,13 +84,15 @@ Current features include:
 ]
 ```
 
-## Stickybox
+### Stickybox
 
 ![stickybox](examples/stickybox.png)
 
-### Usage
+A fun and rotateable sticky note for informal or highlight content.
 
-```
+#### Code
+
+```typst
 #stickybox(
   rotation: 5deg,
   width: 5cm
@@ -86,3 +100,17 @@ Current features include:
   #lorem(20)
 ]
 ```
+
+## Contributing
+
+We welcome contributions to improve this package! Here's how you can help:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Submit a pull request with a clear description.
+
+## License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this project under the terms of the license. See the [LICENSE](LICENSE) file for detailed information.
