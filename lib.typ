@@ -93,6 +93,50 @@
   }
 }
 
+#let colorbox-rounded(
+  title: none,
+  box-colors: box-colors,
+  color: "default",
+  radius: 2pt,
+  inset: 8pt,
+  stroke: 2pt,
+  width: auto,
+  body,
+) = {
+  showybox(
+    title: title,
+    frame: (
+      title-color: box-colors.at(color).stroke,
+      body-color: box-colors.at(color).fill,
+      border-color: box-colors.at(color).stroke,
+      radius: radius,
+      thickness: stroke,
+      body-inset: inset,
+    ),
+    title-style: (
+      color: box-colors.at(color).title,
+      weight: "bold",
+      boxed-style: (
+        anchor: (
+          x: left,
+          y: top,
+        ),
+        offset: (
+          x: -1em,
+        ),
+        radius: (radius),
+      ),
+    ),
+    body-style: (
+      align: left,
+      color: black,
+    ),
+    width: width,
+  )[
+    #body
+  ]
+}
+
 #let slanted-colorbox(
   title: "Title",
   color: "default",
