@@ -28,6 +28,7 @@
   if title != none {
     return showybox(
       title: title,
+      breakable: true,
       frame: (
         title-color: box-colors.at(color).stroke,
         body-color: box-colors.at(color).fill,
@@ -60,6 +61,7 @@
     ]
   } else {
     return showybox(
+      breakable: true,
       frame: (
         title-color: box-colors.at(color).stroke,
         body-color: box-colors.at(color).fill,
@@ -105,6 +107,7 @@
 ) = {
   showybox(
     title: title,
+    breakable: true,
     frame: (
       title-color: box-colors.at(color).stroke,
       body-color: box-colors.at(color).fill,
@@ -147,6 +150,7 @@
   body,
 ) = {
   showybox(
+    breakable: true,
     frame: (
       body-color: box-colors.at(color).fill,
       border-color: box-colors.at(color).stroke,
@@ -190,6 +194,7 @@
 ) = {
   return showybox(
     title: text(fill: white, weight: "bold")[#title],
+    breakable: true,
     frame: (
       title-color: box-colors.at(color).stroke,
       body-color: box-colors.at(color).fill,
