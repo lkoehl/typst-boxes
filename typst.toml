@@ -1,6 +1,6 @@
 [package]
 name = "colorful-boxes"
-version = "1.4.1"
+version = "1.4.2"
 repository = "https://github.com/lkoehl/typst-boxes"
 entrypoint = "lib.typ"
 exclude = ["/examples/*"]
