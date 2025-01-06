@@ -142,6 +142,7 @@
 
 #let slanted-colorbox(
   title: "Title",
+  box-colors: box-colors,
   color: "default",
   radius: 2pt,
   stroke: 2pt,
