@@ -224,9 +224,7 @@
   ]
 }
 
-#let stickybox(rotation: 0deg, width: 100%, body) = {
-  let stickyYellow = rgb(255, 240, 172)
-
+#let stickybox(rotation: 0deg, width: 100%, fill: rgb(255, 240, 172), body) = {
   return rotate(rotation)[
     #let shadow = 100%
     #if width != 100% {
@@ -239,7 +237,7 @@
       #image("background.svg", width: shadow - 3mm)
     ]
     #block(
-      fill: stickyYellow,
+      fill: fill,
       width: width,
     )[
       #place(
