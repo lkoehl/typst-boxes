@@ -25,20 +25,31 @@
   width: auto,
   body,
 ) = {
+  let stroke-color = black
+  let fill-color = gray.lighten(50%)
+  let title-color = white
+  if type(color) == str {
+    stroke-color = box-colors.at(color, default:(stroke: black)).stroke
+    fill-color = box-colors.at(color, default:(fill: gray.lighten(50%))).fill
+  } else if type(color) == dictionary {
+    stroke-color = color.at("stroke", default: stroke-color)
+    fill-color = color.at("fill", default: fill-color)
+    title-color = color.at("text", default: title-color)
+  }
   if title != none {
     return showybox(
       title: title,
       breakable: true,
       frame: (
-        title-color: box-colors.at(color).stroke,
-        body-color: box-colors.at(color).fill,
-        border-color: box-colors.at(color).stroke,
+        title-color: stroke-color,
+        body-color: fill-color,
+        border-color: stroke-color,
         radius: radius,
         thickness: stroke,
         body-inset: (top: inset + 4pt, rest: inset),
       ),
       title-style: (
-        color: box-colors.at(color).title,
+        color: title-color,
         weight: "bold",
         boxed-style: (
           anchor: (
@@ -63,15 +74,15 @@
     return showybox(
       breakable: true,
       frame: (
-        title-color: box-colors.at(color).stroke,
-        body-color: box-colors.at(color).fill,
-        border-color: box-colors.at(color).stroke,
+        title-color: stroke-color,
+        body-color: fill-color,
+        border-color: stroke-color,
         radius: radius,
         thickness: stroke,
         body-inset: inset,
       ),
       title-style: (
-        color: box-colors.at(color).title,
+        color: title-color,
         weight: "bold",
         boxed-style: (
           anchor: (
@@ -105,19 +116,30 @@
   width: auto,
   body,
 ) = {
+  let stroke-color = black
+  let fill-color = gray.lighten(50%)
+  let title-color = white
+  if type(color) == str {
+    stroke-color = box-colors.at(color, default:(stroke: black)).stroke
+    fill-color = box-colors.at(color, default:(fill: gray.lighten(50%))).fill
+  } else if type(color) == dictionary {
+    stroke-color = color.at("stroke", default: stroke-color)
+    fill-color = color.at("fill", default: fill-color)
+    title-color = color.at("text", default: title-color)
+  }
   showybox(
     title: title,
     breakable: true,
     frame: (
-      title-color: box-colors.at(color).stroke,
-      body-color: box-colors.at(color).fill,
-      border-color: box-colors.at(color).stroke,
+      title-color: stroke-color,
+      body-color: fill-color,
+      border-color: stroke-color,
       radius: radius,
       thickness: stroke,
       body-inset: inset,
     ),
     title-style: (
-      color: box-colors.at(color).title,
+      color: title-color,
       weight: "bold",
       boxed-style: (
         anchor: (
@@ -150,11 +172,22 @@
   width: auto,
   body,
 ) = {
+  let stroke-color = black
+  let fill-color = gray.lighten(50%)
+  let title-color = white
+  if type(color) == str {
+    stroke-color = box-colors.at(color, default:(stroke: black)).stroke
+    fill-color = box-colors.at(color, default:(fill: gray.lighten(50%))).fill
+  } else if type(color) == dictionary {
+    stroke-color = color.at("stroke", default: stroke-color)
+    fill-color = color.at("fill", default: fill-color)
+    title-color = color.at("text", default: title-color)
+  }
   showybox(
     breakable: true,
     frame: (
-      body-color: box-colors.at(color).fill,
-      border-color: box-colors.at(color).stroke,
+      body-color: fill-color,
+      border-color: stroke-color,
       radius: radius,
       thickness: stroke,
       body-inset: 0pt,
@@ -165,7 +198,7 @@
       let size = measure(title)
       let inset = 8pt
       polygon(
-        fill: box-colors.at(color).stroke,
+        fill: stroke-color,
         (0pt, 0pt),
         (0pt, size.height + (2 * inset)),
         (size.width * 1.11 + (2 * inset), size.height + (2 * inset)),
@@ -193,19 +226,30 @@
   centering: false,
   body,
 ) = {
+  let stroke-color = black
+  let fill-color = gray.lighten(50%)
+  let title-color = white
+  if type(color) == str {
+    stroke-color = box-colors.at(color, default:(stroke: black)).stroke
+    fill-color = box-colors.at(color, default:(fill: gray.lighten(50%))).fill
+  } else if type(color) == dictionary {
+    stroke-color = color.at("stroke", default: stroke-color)
+    fill-color = color.at("fill", default: fill-color)
+    title-color = color.at("text", default: title-color)
+  }
   return showybox(
     title: text(fill: white, weight: "bold")[#title],
     breakable: true,
     frame: (
-      title-color: box-colors.at(color).stroke,
-      body-color: box-colors.at(color).fill,
-      border-color: box-colors.at(color).stroke,
+      title-color: stroke-color,
+      body-color: fill-color,
+      border-color: stroke-color,
       radius: radius,
       thickness: stroke,
       body-inset: inset,
     ),
     title-style: (
-      color: white,
+      color: title-color,
       weight: "bold",
       boxed-style: (
         anchor: (

@@ -1,74 +1,101 @@
 # Typst Boxes
 
-**Typst Boxes** is a package for creating colorful and customizable boxes in [Typst](https://github.com/typst/typst). It's perfect for enhancing your documents with visually appealing components.
+**Typst Boxes** is a Typst package for adding colorful, customizable boxes to your documents.
 
-[➡️ Check out the example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX) to see all the boxes in action!
+[➡️ Explore the live example project](https://typst.app/project/rp9q3upfc69bPUCbv0BjzX)
+
+---
+
+## Table of Contents
+
+1. [Features](#features)  
+2. [Examples & Usage](#examples--usage)  
+   - [Colorbox](#colorbox)  
+   - [Slanted Colorbox](#slanted-colorbox)  
+   - [Outline Colorbox](#outline-colorbox)  
+   - [Stickybox](#stickybox)  
+3. [Contributing](#contributing)  
+4. [License](#license)  
 
 ---
 
 ## Features
 
-- Colorful boxes in four predefined colors: **black**, **red**, **blue**, and **green**.
-- A **slanted headline colorbox** for dynamic designs.
-- A **simple outline box** for clean layouts.
-- A **rotateable sticky note** for fun or informal content.
+- Predefined color themes: **black**, **red**, **blue**, **green**, **purple**, **gold**, and more  
+- `slanted-colorbox` for angled headlines  
+- `outline-colorbox` for simple bordered layouts  
+- `stickybox` for rotatable notes  
+- Custom color support via `color` parameter (string or dictionary)  
+- Disable sticky tape with `tape: false`  
 
 ---
 
-## Examples and Usage
+## Examples & Usage
 
 ### Colorbox
 
 ![colorbox_example](examples/colorbox.png)
-
-A versatile colorful box with a title and customizable design.
-
-#### Code:
 
 ```typst
 #colorbox(
   title: lorem(5),
   color: "blue",
   radius: 2pt,
-  width: auto
+  width: auto,
 )[
   #lorem(50)
 ]
 ```
 
+Use other built‑in colors:  
+`"red"`, `"green"`, `"purple"`, `"gold"`, `"gray"`, `"cyan"`, etc.
+
+Custom color via dictionary:
+
+```typst
+#colorbox(
+  title: "Custom Theme",
+  color: (
+    fill: rgb("#f0f8ff"),
+    stroke: rgb("#00bfff"),
+    title: rgb("#002366")
+  ),
+  radius: 4pt,
+  width: auto
+)[
+  "This box uses a custom color dictionary."
+]
+```
+
+---
+
 ### Slanted Colorbox
 
 ![slantedColorbox_example](examples/slanted-colorbox.png)
-
-Add some flair with a slanted headline.
-
-#### Code
 
 ```typst
 #slanted-colorbox(
   title: lorem(5),
   color: "red",
   radius: 0pt,
-  width: auto
+  width: auto,
 )[
   #lorem(50)
 ]
 ```
 
+---
+
 ### Outline Colorbox
 
 ![outlinebox_example](examples/outline-colorbox.png)
-
-A clean and simple box with an outline. Titles can be aligned to the center or the left.
-
-#### Code
 
 ```typst
 #outline-colorbox(
   title: lorem(5),
   width: auto,
   radius: 2pt,
-  centering: false
+  centering: false,
 )[
   #lorem(50)
 ]
@@ -78,39 +105,81 @@ A clean and simple box with an outline. Titles can be aligned to the center or t
   color: "green",
   width: auto,
   radius: 2pt,
-  centering: true
+  centering: true,
 )[
   #lorem(50)
 ]
 ```
 
-### Stickybox
-
-![stickybox](examples/stickybox.png)
-
-A fun and rotateable sticky note for informal or highlight content.
-
-#### Code
+Custom colors via dictionary:
 
 ```typst
-#stickybox(
-  rotation: 5deg,
-  width: 5cm
+#outline-colorbox(
+  title: "Soft Green",
+  color: (
+    fill: green.lighten(70%),
+    stroke: green.darken(40%)
+  ),
+  width: auto,
+  radius: 2pt,
+  centering: false,
 )[
   #lorem(20)
 ]
 ```
 
+---
+
+### Stickybox
+
+![stickybox](examples/stickybox.png)
+
+#### Basic
+
+```typst
+#stickybox(
+  rotation: 5deg,
+  width: 5cm,
+)[
+  #lorem(20)
+]
+```
+
+#### Custom Background Color
+
+```typst
+#stickybox(
+  width: 5cm,
+  rotation: -5deg,
+  fill: rgb("#ffb6a6"),
+)[
+  #lorem(20)
+]
+```
+
+#### Disable Tape
+
+```typst
+#stickybox(
+  width: 8cm,
+  fill: rgb("#33ff57"),
+  tape: false,
+)[
+  "No tape here!"
+]
+```
+
+---
+
 ## Contributing
 
-We welcome contributions to improve this package! Here's how you can help:
+We welcome contributions!  
+1. Fork this repository  
+2. Create a feature branch  
+3. Open a pull request with a clear description  
 
-1. Fork the repository.
-2. Create a new branch for your feature or fix.
-3. Submit a pull request with a clear description.
+---
 
 ## License
 
-This project is licensed under the **MIT License**.
-
-You are free to use, modify, and distribute this project under the terms of the license. See the [LICENSE](LICENSE) file for detailed information.
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
