@@ -224,37 +224,39 @@
   ]
 }
 
-#let stickybox(rotation: 0deg, width: 100%, fill: rgb(255, 240, 172), body) = {
+#let stickybox(rotation: 0deg, width: 100%, fill: rgb(255, 240, 172), tape: true, body) = {
   return rotate(rotation)[
-    #let shadow = 100%
-    #if width != 100% {
-      shadow = width
-    }
-    #place(
-      bottom + center,
-      dy: if type(width) == ratio { 0.2 * shadow } else { 0.05 * shadow },
-    )[
-      #image("background.svg", width: shadow - 3mm)
-    ]
-    #block(
-      fill: fill,
-      width: width,
-    )[
-      #place(
-        top + center,
-        dy: -2mm,
-      )[
-        #image(
-          "tape.svg",
-          width: if type(width) == ratio { calc.clamp(width * 0.35cm / 1cm, 1, 4) * 1cm } else {
-            calc.clamp(width * 0.35 / 1cm, 1, 4) * 1cm
-          },
-          height: 4mm,
-        )
-      ]
-      #block(width: 100%, inset: (top: 12pt, x: 8pt, bottom: 8pt))[
-        #body
-      ]
+    #block(width: width)[
+      #layout(size => {
+        let height = measure(image("background.svg", width: size.width)).height
+        place(
+          bottom + center,
+          dy: 0.6 * height,
+        )[
+          #image("background.svg", width: size.width)
+        ]
+        box(
+          fill: fill,
+          width: width,
+          inset: (top: if tape { 12pt } else { 8pt }, x: 8pt, bottom: 8pt),
+        )[
+          #body
+          #if tape {
+            place(
+              top + center,
+              dy: -2mm - 12pt,
+            )[
+              #image(
+                "tape.svg",
+                width: if type(width) == ratio { calc.clamp(width * 0.35cm / 1cm, 1, 4) * 1cm } else {
+                  calc.clamp(width * 0.35 / 1cm, 1, 4) * 1cm
+                },
+                height: 4mm,
+              )
+            ]
+          }
+        ]
+      })
     ]
   ]
 }
